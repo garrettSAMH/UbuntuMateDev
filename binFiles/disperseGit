@@ -22,7 +22,7 @@ echo -n "."
 #sudo cp /etc/avahi/services/rfb.service /etc/avahi/services/rfb.service.OLD
 #sudo touch /etc/avahi/services/rfb.service.OLD
 #cat /etc/avahi/services/rfb.service 2>&1 | sudo tee /etc/avahi/services/rfb.service.OLD
-sudo tee /etc/avahi/services/rfb.service.OLD < /etc/avahi/services/rfb.service > /dev/null/
+sudo tee /etc/avahi/services/rfb.service.OLD < /etc/avahi/services/rfb.service >/dev/null/
 sleep 1
 echo -n "."
 
