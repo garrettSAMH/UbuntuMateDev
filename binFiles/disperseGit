@@ -21,13 +21,15 @@ echo -n "."
 #bakup original file
 #sudo cp /etc/avahi/services/rfb.service /etc/avahi/services/rfb.service.OLD
 #sudo touch /etc/avahi/services/rfb.service.OLD
-cat /etc/avahi/services/rfb.service 2>&1 | sudo tee /etc/avahi/services/rfb.service.OLD
+#cat /etc/avahi/services/rfb.service 2>&1 | sudo tee /etc/avahi/services/rfb.service.OLD
+sudo tee /etc/avahi/services/rfb.service.OLD < /etc/avahi/services/rfb.service
 sleep 1
 echo -n "."
 
 #transfer in new file
 #sudo cp /media/GitRepos/UbuntuMateDev/sysFiles/rfb.service /etc/avahi/services/rfb.service
-cat /media/GitRepos/UbuntuMateDev/sysFiles/rfb.service 2>&1 | sudo tee /etc/avahi/services/rfb.service
+#cat /media/GitRepos/UbuntuMateDev/sysFiles/rfb.service 2>&1 | sudo tee /etc/avahi/services/rfb.service
+sudo tee /etc/avahi/services/rfb.service < /media/GitRepos/UbuntuMateDev/sysFiles/rfb.service
 sleep 1
 echo ".[ok]"
 
