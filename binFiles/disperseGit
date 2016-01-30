@@ -79,7 +79,7 @@ echo -n "."
 
 #transfer in new file... cat reads original doc and redirects through pipe to sudo tee that writes the new file
 #/dev/null stops output in the terminal window
-cat /media/GitRepos/UbuntuMateDev/sysFiles/AppleVolumes.default | sudo tee /etc/netatalk/AppleVolumes.defualt > /dev/null
+cat /media/GitRepos/UbuntuMateDev/sysFiles/AppleVolumes.default | sudo tee /etc/netatalk/AppleVolumes.default > /dev/null
 sleep 1
 echo ".[ok]"
 
