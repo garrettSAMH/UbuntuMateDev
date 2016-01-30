@@ -18,20 +18,14 @@ sudo touch rfb.service
 sleep 1
 echo -n "."
 
-#bakup original file
-#sudo cp /etc/avahi/services/rfb.service /etc/avahi/services/rfb.service.OLD
-#sudo touch /etc/avahi/services/rfb.service.OLD
-#cat /etc/avahi/services/rfb.service 2>&1 | sudo tee /etc/avahi/services/rfb.service.OLD
-#sudo tee /etc/avahi/services/rfb.service.OLD < /etc/avahi/services/rfb.service
-cat /etc/avahi/services/rfb.service | tee /etc/avahi/services/rfb.service.OLD > /dev/null
+#bakup original file... cat reads original doc and redirects through pipe to sudo tee that writes to the backup file
+cat /etc/avahi/services/rfb.service | sudo tee /etc/avahi/services/rfb.service.OLD > /dev/null
 sleep 1
 echo -n "."
 
-#transfer in new file
-#sudo cp /media/GitRepos/UbuntuMateDev/sysFiles/rfb.service /etc/avahi/services/rfb.service
-#cat /media/GitRepos/UbuntuMateDev/sysFiles/rfb.service 2>&1 | sudo tee /etc/avahi/services/rfb.service
-#sudo tee /etc/avahi/services/rfb.service < /media/GitRepos/UbuntuMateDev/sysFiles/rfb.service
-cat /media/GitRepos/UbuntuMateDev/sysFiles/rfb.service | tee /etc/avahi/services/rfb.service > /dev/null
+#transfer in new file... cat reads original doc and redirects through pipe to sudo tee that writes the new file
+#/dev/null stops output in the terminal window
+cat /media/GitRepos/UbuntuMateDev/sysFiles/rfb.service | sudo tee /etc/avahi/services/rfb.service > /dev/null
 sleep 1
 echo ".[ok]"
 
@@ -47,15 +41,18 @@ echo -n "Installing afpd.service to avahi"
 
 #directory to file
 cd /etc/avahi/services 
+sudo touch afpd.service
 sleep 1
 echo -n "."
 
-#bakup original file sudo cp /etc/avahi/services/afpd.service /etc/avahi/services/afpd.service.OLD
+#bakup original file... cat reads original doc and redirects through pipe to sudo tee that writes to the backup file
+cat /etc/avahi/services/afpd.service | sudo tee /etc/avahi/services/afpd.service.OLD > /dev/null
 sleep 1
 echo -n "."
 
-#transfer in new file sudo cp /media/GitRepos/UbuntuMateDev/sysFiles/afpd.service
-#/etc/avahi/services/afpd.service
+#transfer in new file... cat reads original doc and redirects through pipe to sudo tee that writes the new file
+#/dev/null stops output in the terminal window
+cat /media/GitRepos/UbuntuMateDev/sysFiles/afpd.service | sudo tee /etc/avahi/services/afpd.service > /dev/null
 sleep 1
 echo ".[ok]"
 
