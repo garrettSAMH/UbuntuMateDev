@@ -14,20 +14,20 @@ echo -n "Installing rfb.service to avahi"
 
 #directory to file
 cd /etc/avahi/services
-touch rfb.service
+sudo touch rfb.service
 sleep 1
 echo -n "."
 
 #bakup original file
 #sudo cp /etc/avahi/services/rfb.service /etc/avahi/services/rfb.service.OLD
-touch /etc/avahi/services/rfb.service.OLD
-cat /etc/avahi/services/rfb.service > /etc/avahi/services/rfb.service.OLD
+sudo touch /etc/avahi/services/rfb.service.OLD
+sudo cat /etc/avahi/services/rfb.service > /etc/avahi/services/rfb.service.OLD
 sleep 1
 echo -n "."
 
 #transfer in new file
 #sudo cp /media/GitRepos/UbuntuMateDev/sysFiles/rfb.service /etc/avahi/services/rfb.service
-cat /media/GitRepos/UbuntuMateDev/sysFiles/rfb.service > /etc/avahi/services/rfb.service
+sudo cat /media/GitRepos/UbuntuMateDev/sysFiles/rfb.service > /etc/avahi/services/rfb.service
 sleep 1
 echo ".[ok]"
 
