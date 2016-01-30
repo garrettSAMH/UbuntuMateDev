@@ -10,7 +10,7 @@
 ###########################
 
 #rfb.service
-echo "Installing rfb.service to avahi"
+echo -n "Installing rfb.service to avahi"
 
 #directory to file
 cd /etc/avahi/services
@@ -23,7 +23,7 @@ echo -n "."
 #sudo touch /etc/avahi/services/rfb.service.OLD
 #cat /etc/avahi/services/rfb.service 2>&1 | sudo tee /etc/avahi/services/rfb.service.OLD
 #sudo tee /etc/avahi/services/rfb.service.OLD < /etc/avahi/services/rfb.service
-cat /etc/avahi/services/rfb.service | sudo tee /etc/avahi/services/rfb.service.OLD > /dev/null
+cat /etc/avahi/services/rfb.service | tee /etc/avahi/services/rfb.service.OLD > /dev/null
 sleep 1
 echo -n "."
 
@@ -31,7 +31,7 @@ echo -n "."
 #sudo cp /media/GitRepos/UbuntuMateDev/sysFiles/rfb.service /etc/avahi/services/rfb.service
 #cat /media/GitRepos/UbuntuMateDev/sysFiles/rfb.service 2>&1 | sudo tee /etc/avahi/services/rfb.service
 #sudo tee /etc/avahi/services/rfb.service < /media/GitRepos/UbuntuMateDev/sysFiles/rfb.service
-cat /media/GitRepos/UbuntuMateDev/sysFiles/rfb.service | sudo tee /etc/avahi/services/rfb.service > /dev/null
+cat /media/GitRepos/UbuntuMateDev/sysFiles/rfb.service | tee /etc/avahi/services/rfb.service > /dev/null
 sleep 1
 echo ".[ok]"
 
