@@ -15,18 +15,18 @@ echo -n "installing rfb.service to avahi"
 #directory to file
 cd /etc/avahi/services
 sudo touch rfb.service
-sleep 1
+sleep .5
 echo -n "."
 
 #bakup original file... cat reads original doc and redirects through pipe to sudo tee that writes to the backup file
 cat /etc/avahi/services/rfb.service | sudo tee /etc/avahi/services/rfb.service.OLD > /dev/null
-sleep 1
+sleep .5
 echo -n "."
 
 #transfer in new file... cat reads original doc and redirects through pipe to sudo tee that writes the new file
 #/dev/null stops output in the terminal window
 cat /media/GitRepos/UbuntuMateDev/sysFiles/rfb.service | sudo tee /etc/avahi/services/rfb.service > /dev/null
-sleep 1
+sleep .5
 echo ".[ok]"
 
 #########################
@@ -42,18 +42,18 @@ echo -n "installing afpd.service to avahi"
 #directory to file
 cd /etc/avahi/services 
 sudo touch afpd.service
-sleep 1
+sleep .5
 echo -n "."
 
 #bakup original file... cat reads original doc and redirects through pipe to sudo tee that writes to the backup file
 cat /etc/avahi/services/afpd.service | sudo tee /etc/avahi/services/afpd.service.OLD > /dev/null
-sleep 1
+sleep .5
 echo -n "."
 
 #transfer in new file... cat reads original doc and redirects through pipe to sudo tee that writes the new file
 #/dev/null stops output in the terminal window
 cat /media/GitRepos/UbuntuMateDev/sysFiles/afpd.service | sudo tee /etc/avahi/services/afpd.service > /dev/null
-sleep 1
+sleep .5
 echo ".[ok]"
 
 #########################
@@ -63,24 +63,24 @@ echo ".[ok]"
 ####### NEXT BLOCK #######
 ##########################
 
-#afpd.service
+#AppleVolumes.default
 echo -n "installing AppleVolumes.default to netatalk"
 
 #directory to file
 cd /etc/netatalk/ 
 sudo touch AppleVolumes.default
-sleep 1
+sleep .5
 echo -n "."
 
 #bakup original file... cat reads original doc and redirects through pipe to sudo tee that writes to the backup file
 cat /etc/netatalk/AppleVolumes.default | sudo tee /etc/netatalk/AppleVolumes.default.OLD > /dev/null
-sleep 1
+sleep .5
 echo -n "."
 
 #transfer in new file... cat reads original doc and redirects through pipe to sudo tee that writes the new file
 #/dev/null stops output in the terminal window
 cat /media/GitRepos/UbuntuMateDev/sysFiles/AppleVolumes.default | sudo tee /etc/netatalk/AppleVolumes.default > /dev/null
-sleep 1
+sleep .5
 echo ".[ok]"
 
 #########################
