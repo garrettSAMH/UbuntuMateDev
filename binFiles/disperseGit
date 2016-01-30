@@ -1,0 +1,58 @@
+#!/bin/bash
+#disperseGit
+
+#Installer script for git files
+
+
+
+
+####### FIRST BLOCK #######
+###########################
+
+#rfb.service
+echo -n "Installing rfb.service to avahi"
+
+#directory to file
+cd /etc/avahi/services
+sleep 1 s
+echo -n "."
+
+#bakup original file
+#sudo cp /etc/avahi/services/rfb.service /etc/avahi/services/rfb.service.OLD
+sleep 1
+echo -n "."
+
+#transfer in new file
+#sudo cp /media/GitRepos/UbuntuMateDev/sysFiles/rfb.service /etc/avahi/services/rfb.service
+sleep 1
+echo ".[ok]"
+
+#########################
+########## END ##########
+
+
+####### NEXT BLOCK #######
+##########################
+
+#afpd.service
+echo -n "Installing afpd.service to avahi"
+
+#directory to file
+cd /etc/avahi/services 
+sleep 1
+echo "."
+
+#bakup original file sudo cp /etc/avahi/services/afpd.service /etc/avahi/services/afpd.service.OLD
+sleep 1
+echo "."
+
+#transfer in new file sudo cp /media/GitRepos/UbuntuMateDev/sysFiles/afpd.service
+#/etc/avahi/services/afpd.service
+sleep 1
+echo ".[ok]"
+
+#########################
+########## END ##########
+
+
+exit 0
