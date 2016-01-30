@@ -1,4 +1,0 @@
-#!/bin/sh
-
-cd /media/GitRepos/UbuntuMateDev/
-git pull

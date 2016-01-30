@@ -14,7 +14,7 @@ echo -n "Installing rfb.service to avahi"
 
 #directory to file
 cd /etc/avahi/services
-sleep 1 s
+sleep 1
 echo -n "."
 
 #bakup original file
@@ -40,11 +40,11 @@ echo -n "Installing afpd.service to avahi"
 #directory to file
 cd /etc/avahi/services 
 sleep 1
-echo "."
+echo -n "."
 
 #bakup original file sudo cp /etc/avahi/services/afpd.service /etc/avahi/services/afpd.service.OLD
 sleep 1
-echo "."
+echo -n "."
 
 #transfer in new file sudo cp /media/GitRepos/UbuntuMateDev/sysFiles/afpd.service
 #/etc/avahi/services/afpd.service
